@@ -1,11 +1,11 @@
 {
   "name": "citationbuddy",
   "version": "1.0.0",
-  "description": "Citation builder built with React, utilizing React Hooks",
+  "description": "Citation tool built with React utilizing Hooks",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html"
+    "start": "parcel src/index.html"
   },
   "repository": {
     "type": "git",
@@ -13,13 +13,17 @@
   },
   "keywords": [
     "React",
-    "Hooks",
-    "Citations"
+    "Hooks"
   ],
   "author": "Tucker Blackwell",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/trblackw/CitationBuddy/issues"
   },
-  "homepage": "https://github.com/trblackw/CitationBuddy#readme"
+  "homepage": "https://github.com/trblackw/CitationBuddy#readme",
+  "dependencies": {
+    "parcel-bundler": "^1.10.3",
+    "react": "^16.7.0-alpha.0",
+    "react-dom": "^16.7.0-alpha.0"
+  }
 }
