@@ -5,12 +5,11 @@ import { Button } from "./elements/Buttons";
 const Landing = () => {
   const [type, setType] = useState({ type: "" });
   const [style, setStyle] = useState({ style: "" });
-
+console.log(setType);
   const handleSubmit = e => {
     e.preventDefault();
   };
    
-   console.log(type);
   return (
     <Fragment>
       <SelectForm onSubmit={e => handleSubmit(e)}>

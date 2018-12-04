@@ -1,11 +1,14 @@
 import React, { Fragment } from "react";
 import { render } from "react-dom";
-import Test from "./components/Test";
+import Landing from "./components/Landing";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const App = () => (
-  <Fragment>
-    <Test />
-  </Fragment>
+  <Router>
+    <Switch>
+      <Route exact path="/" component={Landing} />
+    </Switch>
+  </Router>
 );
 
 render(<App />, document.querySelector("#root"));

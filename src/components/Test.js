@@ -1,11 +1,13 @@
-import React, { Component } from 'react'
+import React, { useState, Fragment } from "react";
 
-export default class componentName extends Component {
-   render() {
-      return (
-         <div>
-            <p>hey man whatsup</p>
-         </div>
-      )
-   }
-}
+const Test = () => {
+  const [count, setCount] = useState(0);
+  return (
+    <Fragment>
+      <p>count = {count}</p>
+      <button onClick={() => setCount(count + 1)}>increment</button>
+    </Fragment>
+  );
+};
+
+export default Test;
