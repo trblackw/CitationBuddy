@@ -25,7 +25,9 @@
     "parcel-bundler": "^1.10.3",
     "react": "^16.7.0-alpha.0",
     "react-dom": "^16.7.0-alpha.0",
+    "react-redux": "^6.0.0",
     "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1",
     "src": "^1.1.2",
     "styled-components": "^4.1.2"
   },
@@ -35,6 +37,9 @@
     "@babel/preset-env": "^7.2.0",
     "@babel/preset-es2017": "^7.0.0-beta.53",
     "@babel/preset-react": "^7.0.0",
-    "babel-plugin-transform-class-properties": "^6.24.1"
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "redux-devtools-extension": "^2.13.7",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0"
   }
 }
