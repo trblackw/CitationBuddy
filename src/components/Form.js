@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { CitationContainer } from "./elements/form_elements";
-import { Button } from "./elements/buttons";
 import Author from "./Author";
+import Icon from "./elements/Icon";
 
 const Form = ({ type, style }) => {
   const [count, setAuthorCount] = useState(1);
@@ -21,9 +21,9 @@ const Form = ({ type, style }) => {
       return (
         <CitationContainer>
           {authors.length > 1 ? authors.map(author => author) : authors[0]}
-          <Button color="lightblue" onClick={() => setAuthorCount(count + 1)}>
-            Add another author
-          </Button>
+          <a href="#" onClick={() => setAuthorCount(count + 1)}>
+            <Icon name="plus" color="#374785" />
+          </a>
         </CitationContainer>
       );
   }
