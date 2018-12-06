@@ -1,14 +1,15 @@
-import React from "react";
-import {SelectForm, Manuals}
+import React, { useState } from "react";
+import { SelectForm, Manuals } from "./elements/form_elements";
 import { Button } from "./elements/buttons";
-import { useInputValue } from "./customHooks/useInputValue";
+import { useInputValue } from "./hooks/useInputValue";
+import { Redirect } from "react-router-dom";
 
-const Landing = () => {
+const Landing = ({ history }) => {
   const type = useInputValue("");
   const style = useInputValue("");
   const handleSubmit = e => {
     e.preventDefault();
-    console.log({ type: type.value, style: style.value });
+    history.push(`${type.value}/${style.value}`);
   };
 
   return (
@@ -56,5 +57,3 @@ const Landing = () => {
 };
 
 export default Landing;
-
-
