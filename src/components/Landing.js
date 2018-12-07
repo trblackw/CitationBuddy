@@ -1,17 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { SelectForm, Manuals } from "./elements/form_elements";
 import { Button } from "./elements/buttons";
 import { useInputValue } from "./hooks/useInputValue";
-import { Redirect } from "react-router-dom";
 
 const Landing = ({ history }) => {
-  const type = useInputValue("");
-  const style = useInputValue("");
+  const type = useInputValue("book");
+  const style = useInputValue("APA");
   const handleSubmit = e => {
     e.preventDefault();
     history.push(`${type.value}/${style.value}`);
   };
-
   return (
     <>
       <SelectForm onSubmit={e => handleSubmit(e)} className="drop-shadow">
@@ -36,7 +34,12 @@ const Landing = ({ history }) => {
             <option value="CSE-CBE">CSE/CBE</option>
           </select>
         </div>
-        <Button type="submit" color="#374785" className="shadow">
+        <Button
+          type="submit"
+          color="#374785"
+          position="2.2em 0"
+          className="shadow"
+        >
           submit
         </Button>
       </SelectForm>
