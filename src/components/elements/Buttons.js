@@ -7,7 +7,7 @@ export const Button = styled.button`
   width: auto;
   height: 20px;
   border: none;
-  margin: 2.2em 0;
+  margin: ${props => props.position};
   position: relative;
   border-radius: 5px;
    &:hover {

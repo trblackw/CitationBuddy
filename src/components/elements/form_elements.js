@@ -74,17 +74,34 @@ export const CitationContainer = styled.div`
   input[name="middle"] {
     width: 10%;
   }
-  button {
-    float: right;
-    position: fixed;
+
+  input[name="title"] {
+    width: 90%;
   }
 
+  input[name="publisher"] {
+    width: 50%;
+  }
+
+  input[name="location"] {
+    width: 35%;
+  }
+
+  input[name="year"] {
+    width: 25%;
+  }
   svg {
     float: right;
   }
+
+  hr {
+    border-top: 1px solid #374785;
+    border-bottom: 1px solid #374785;
+  }
 `;
 
-export const AuthorContainer = styled.div`
+export const FlexForm = styled.form`
   display: flex;
   justify-content: center;
+  margin: 1em;
 `;
