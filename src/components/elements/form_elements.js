@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "./responsive";
 
 export const FormHeader = styled.div`
   margin: 0.2em auto;
@@ -65,12 +66,110 @@ export const Manuals = styled.div`
 
 export const CitationContainer = styled.div`
   margin: 1em auto;
-  padding: 2em;
+  padding: 1.5em;
   background: #f76c6c;
   color: whitesmoke;
-  width: 80%;
   border-radius: 5px;
   border: 2px solid #374785;
+
+  input {
+     &:focus {
+        border: 1px solid #374785;
+     }
+  }
+
+  svg {
+    float: right;
+  }
+
+  hr {
+    border-top: 1px solid #374785;
+    border-bottom: 1px solid #374785;
+  }
+
+  /* 1024px */
+  @media ${device.laptop} {
+     text-align: center;
+     label {
+
+     }
+     max-width: 85%;
+     [name="first"], [name="last"] {
+        width: 200px;
+        margin: 1em .8em;
+        padding: .2em;
+     }
+     [name='middle'] {
+        width: 80px;
+        margin: 1em .8em;
+     }
+
+  }
+
+
+  /*display: flex;
+  flex-direction: row;
+
+  input[name="first"],
+  input[name="last"] {
+    max-width: 30%;
+  }
+
+  input[name="middle"] {
+    max-width: 10%;
+  }
+
+  input[name="title"] {
+    max-width: 90%;
+  }
+
+  input[name="publisher"] {
+    max-width: 50%;
+  }
+
+  input[name="location"] {
+    max-width: 35%;
+  }
+
+  input[name="year"] {
+    max-width: 25%;
+  }
+
+  @media ${device.tablet} {
+    max-width: 700px;
+  }
+
+  @media ${device.mobileM} {
+    max-width: 95%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    input[name="first"],
+    input[name="last"] {
+      width: 100%;
+    }
+
+    input[name="middle"] {
+      width: 100%;
+    }
+
+    input[name="title"] {
+      width: 100%;
+    }
+
+    input[name="publisher"] {
+      width: 100%;
+    }
+
+    input[name="location"] {
+      width: 100%;
+    }
+
+    input[name="year"] {
+      width: 100%;
+    }
+  }
 
   label {
     margin-top: 0.5em;
@@ -83,30 +182,6 @@ export const CitationContainer = styled.div`
     border-radius: 3px;
   }
 
-  input[name="first"],
-  input[name="last"] {
-    width: 30%;
-  }
-
-  input[name="middle"] {
-    width: 10%;
-  }
-
-  input[name="title"] {
-    width: 90%;
-  }
-
-  input[name="publisher"] {
-    width: 50%;
-  }
-
-  input[name="location"] {
-    width: 35%;
-  }
-
-  input[name="year"] {
-    width: 25%;
-  }
   svg {
     float: right;
   }
@@ -114,7 +189,7 @@ export const CitationContainer = styled.div`
   hr {
     border-top: 1px solid #374785;
     border-bottom: 1px solid #374785;
-  }
+  } */
 `;
 
 export const FlexForm = styled.form`

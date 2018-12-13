@@ -8,14 +8,14 @@ const Author = () => {
   const last = useInputValue("");
   return (
     <>
-      <FlexForm>
+      {/* <FlexForm> */}
         <label htmlFor="first">First</label>
         <input type="text" name="first" {...first} />
         <label htmlFor="middle">Middle</label>
         <input type="text" name="middle" {...middle} />
         <label htmlFor="last">Last</label>
         <input type="text" name="last" {...last} />
-      </FlexForm>
+      {/* </FlexForm> */}
     </>
   );
 };
