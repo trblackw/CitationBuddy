@@ -31,6 +31,23 @@ export const SelectForm = styled.form`
   }
 `;
 
+export const Button = styled.button`
+  background: ${props => props.color};
+  padding: 0 0.5em;
+  color: whitesmoke;
+  width: auto;
+  height: 20px;
+  border: none;
+  margin: ${props => props.position};
+  position: relative;
+  border-radius: 5px;
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition-duration: 300ms;
+  }
+`;
+
 export const Manuals = styled.div`
   border: 1px solid white;
   background: whitesmoke;
