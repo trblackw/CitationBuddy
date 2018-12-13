@@ -1,5 +1,5 @@
 import React from "react";
-import { AuthorContainer } from "./elements/form_elements";
+import { FlexForm } from "./elements/index";
 import { useInputValue } from "./hooks/useInputValue";
 
 const Author = () => {
@@ -8,14 +8,14 @@ const Author = () => {
   const last = useInputValue("");
   return (
     <>
-      <AuthorContainer>
+      <FlexForm>
         <label htmlFor="first">First</label>
         <input type="text" name="first" {...first} />
         <label htmlFor="middle">Middle</label>
         <input type="text" name="middle" {...middle} />
         <label htmlFor="last">Last</label>
         <input type="text" name="last" {...last} />
-      </AuthorContainer>
+      </FlexForm>
     </>
   );
 };

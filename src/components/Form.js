@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from "react";
-import { CitationContainer } from "./elements/form_elements";
+import React, { useState } from "react";
+import { Icon, CitationContainer, Button } from "./elements/index";
 import Author from "./Author";
-import Icon from "./elements/Icon";
+import Book from "./Book";
 
 const Form = ({ type, style }) => {
   const [count, setAuthorCount] = useState(1);
 
   const renderAuthorInputs = () => {
-    const markup = [];
+    let markup = [];
     for (let i = 1; i <= count; i++) {
-      markup.push(<Author key={i} />);
+      markup = [...markup, <Author key={i} />];
     }
     return markup;
   };
@@ -20,12 +20,19 @@ const Form = ({ type, style }) => {
     case "book":
       return (
         <CitationContainer>
-          {authors.length > 1 ? authors.map(author => author) : authors[0]}
+          {authors.length > 1 ? authors : authors[0]}
           <a href="#" onClick={() => setAuthorCount(count + 1)}>
             <Icon name="plus" color="#374785" />
           </a>
+          <hr />
+          <Book />
+          <Button color="#374785" position={"0 auto"}>
+            submit
+          </Button>
         </CitationContainer>
       );
+    default:
+      return <h1>oops</h1>;
   }
 };
 

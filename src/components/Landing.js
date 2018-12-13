@@ -1,6 +1,5 @@
 import React from "react";
-import { SelectForm, Manuals } from "./elements/form_elements";
-import { Button } from "./elements/buttons";
+import { SelectForm, Manuals, Button } from "./elements/index";
 import { useInputValue } from "./hooks/useInputValue";
 
 const Landing = ({ history }) => {

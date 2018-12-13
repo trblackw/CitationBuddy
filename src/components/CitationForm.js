@@ -1,6 +1,6 @@
 import React from "react";
 import Form from "./Form";
-import { FormHeader } from "./elements/form_elements";
+import { FormHeader } from "./elements/index";
 
 const CitationForm = ({ match }) => {
    const { type, style } = match.params;

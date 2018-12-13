@@ -1,5 +1,5 @@
 import React from "react";
-import { FlexForm } from "./elements/form_elements";
+import { FlexForm } from "./elements/index";
 import { useInputValue } from "./hooks/useInputValue";
 
 const Book = () => {
