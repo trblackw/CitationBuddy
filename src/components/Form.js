@@ -9,7 +9,7 @@ const Form = ({ type, style }) => {
   const renderAuthorInputs = () => {
     let markup = [];
     for (let i = 1; i <= count; i++) {
-      markup = [...markup, <Author key={i} />];
+      markup = [...markup, <Author key={i} />, <br />];
     }
     return markup;
   };
@@ -20,13 +20,17 @@ const Form = ({ type, style }) => {
     case "book":
       return (
         <CitationContainer>
-          {authors.length > 1 ? authors : authors[0]}
-          <a href="#" onClick={() => setAuthorCount(count + 1)}>
-            <Icon name="plus" color="#374785" />
-          </a>
+          <div className="form-container">
+            {authors.length > 1 ? authors : authors[0]}
+            <a href="#" onClick={() => setAuthorCount(count + 1)}>
+              <Icon name="plus" color="#374785" />
+            </a>
+          </div>
           <hr />
-          <Book />
-          <Button color="#374785" position={"0 auto"}>
+            <div className="form-container" style={{margin: "1em auto 0 auto"}}>
+            <Book />
+          </div>
+          <Button color="#374785" position={"1em 0 auto 0"}>
             submit
           </Button>
         </CitationContainer>
