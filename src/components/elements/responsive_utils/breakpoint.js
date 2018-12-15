@@ -1,25 +1,16 @@
-import React from "react";
-import MediaQuery from "react-responsive";
-import { string, object } from "prop-types";
+import { css } from "styled-components";
 
-const Breakpoint = ({ name, children }) => {
-  const breakpoints = {
-    desktop: "(min-width: 1025px)",
-    tablet: "(min-width: 768px) and (max-width: 1024px)",
-    phone: "(max-width: 767px)"
-  };
-  const breakpoint = breakpoints[name] || breakpoints.desktop;
-
-  return (
-    <MediaQuery name={name} query={breakpoint}>
-      {children}
-    </MediaQuery>
-  );
+const sizes = {
+  desktop: 1075,
+  tablet: 768,
+  phone: 576
 };
 
-Breakpoint.propTypes = {
-  name: string,
-  children: object
-};
-
-export default Breakpoint;
+export const media = Object.keys(sizes).reduce((acc, label) => {
+  acc[label] = (...args) => css`
+    @media (max-width: ${sizes[label] / 16}em) {
+      ${css(...args)}
+    }
+  `;
+  return acc;
+}, {});

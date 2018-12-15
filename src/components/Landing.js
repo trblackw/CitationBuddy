@@ -1,5 +1,10 @@
 import React from "react";
-import { SelectForm, Manuals, Button } from "./elements/index";
+import {
+  LandingContainer,
+  SelectForm,
+  Manuals,
+  Button
+} from "./elements/index";
 import { useInputValue } from "./hooks/useInputValue";
 
 const Landing = ({ history }) => {
@@ -10,7 +15,7 @@ const Landing = ({ history }) => {
     history.push(`${type.value}/${style.value}`);
   };
   return (
-    <>
+    <LandingContainer>
       <SelectForm onSubmit={e => handleSubmit(e)} className="drop-shadow">
         <div className="select">
           <label htmlFor="type">I want to cite a</label>
@@ -33,15 +38,11 @@ const Landing = ({ history }) => {
             <option value="CSE-CBE">CSE/CBE</option>
           </select>
         </div>
-        <Button
-          type="submit"
-          color="#374785"
-          position="2.2em 0"
-          className="shadow"
-        >
+        <Button type="submit" color="#374785" className="shadow">
           submit
         </Button>
       </SelectForm>
+
       <Manuals className="drop-shadow">
         <h3>
           THE CITATION BUILDER IS BASED ON THE FOLLOWING CITATION MANUALS:
@@ -54,7 +55,7 @@ const Landing = ({ history }) => {
           <li>Council of Science Editors</li>
         </ul>
       </Manuals>
-    </>
+    </LandingContainer>
   );
 };
 

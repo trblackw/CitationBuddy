@@ -8,7 +8,7 @@ const Book = () => {
   const location = useInputValue("");
   const year = useInputValue("");
   return (
-    <FlexForm>
+    <>
       <label htmlFor="title">Title</label>
       <input type="text" name="title" {...title} />
       <label htmlFor="publisher">Publisher</label>
@@ -17,7 +17,7 @@ const Book = () => {
       <input type="text" name="location" {...location} />
       <label htmlFor="year">Year</label>
       <input type="text" name="year" {...year} />
-    </FlexForm>
+    </>
   );
 };
 
