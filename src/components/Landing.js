@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   LandingContainer,
   SelectForm,
@@ -8,8 +8,9 @@ import {
 import { useInputValue } from "./hooks/useInputValue";
 
 const Landing = ({ history }) => {
-  const type = useInputValue("book");
-  const style = useInputValue("APA");
+   const [type, setType] = useState('book');
+   const [style, setStyle] = useState('APA')
+
   const handleSubmit = e => {
     e.preventDefault();
     history.push(`${type.value}/${style.value}`);
@@ -19,7 +20,7 @@ const Landing = ({ history }) => {
       <SelectForm onSubmit={e => handleSubmit(e)} className="drop-shadow">
         <div className="select">
           <label htmlFor="type">I want to cite a</label>
-          <select name="type" {...type}>
+          <select name="type" onChange={e => setType(e.target.value)}>
             <option value="book">book</option>
             <option value="chapter">chapter/essay from book</option>
             <option value="magazine">magazine article</option>
@@ -30,7 +31,7 @@ const Landing = ({ history }) => {
         </div>
         <div className="select">
           <label htmlFor="style">in Citation style</label>
-          <select name="style" {...style}>
+          <select name="style" onChange={e => setStyle(e.target.value)}>
             <option value="APA">APA 6</option>
             <option value="MLA7">MLA 7/essay from book</option>
             <option value="MLA8">MLA 8</option>
