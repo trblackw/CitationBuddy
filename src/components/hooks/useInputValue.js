@@ -4,6 +4,6 @@ export const useInputValue = initialValue => {
   const [value, setValue] = useState(initialValue);
   return {
     value,
-    onChange: e => {setValue(e.target.value), console.log(value)}
+    onChange: e => {setValue(e.target.value)}
   };
 };
